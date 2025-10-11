@@ -60,14 +60,16 @@ body{
   padding: 4rem 2rem ;
 }
 .about img{
-  width: 500px;
+  width: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-.project {
-  background:#0f0f0f;
+.projects {
+ 
   padding: 4rem 2rem;
-  text-align: center;
+  margin-left: 20px;
+  text-align: left;
+  
 }
 .project-lists{
   display: grid;
@@ -82,22 +84,35 @@ body{
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0 , 0  ,0, 0.1);
 }
-.skills{
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.icons{
- 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  font-size: 2.5rem;
-  color: #6964ce;
+.skills {
+  padding: 20px;
+  margin-left: 20px;
+  text-align: left;
 
 }
-.contact{
+.skill-grid{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.skill-card{
+  background: #ccd2e0;
+  border-radius: 12px;
+  width: 100px;
+  transition: transform 0.3s;
   text-align: center;
+  padding: 15px;
+  color: #0c0c0c;
+
+}
+.skill-card:hover{
+  transform: scale(1.05);
+}
+
+.contact{
+  text-align: left;
   padding: 4rem 2rem;
 }
 .footer{

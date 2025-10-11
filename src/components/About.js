@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function About(){
     return(
         <section id="about" className="about">
-            <motion.img src="" alt="profile" 
+            <motion.img src="public\profile.jpg" alt="profile" 
             initial={{opacity :0,scale:0.8}}
             transition={{duration :0.6}}
             whileInView={{opacity :1,scale:1}}
