@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-scroll";
 import { FaSun ,FaMoon } from "react-icons/fa";
 
 function NavBar({darkMode ,setDarkMode}){
@@ -8,8 +7,8 @@ function NavBar({darkMode ,setDarkMode}){
             <h2 className="logo">Feroz Ali</h2>
             <ul>{["Home","about","projects","skills","contact"].map((id)=>(
                 <li key={id}>
-                    <Link to={id} smooth duration={600}>
-                    {id.charAt(0).toUpperCase()+id.slice(1)}</Link>
+                    <a href={`#${id}`}>
+                    {id.charAt(0).toUpperCase()+id.slice(1)}</a>
                 </li>
             ))}
   
