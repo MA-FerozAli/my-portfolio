@@ -6,6 +6,11 @@ const projectData =[
         title:"Complaint Management",
         description:"Flask + Excel-based web app to handle complaints efficiently",
         tech :"Python,Excel,HTML/CSS" ,
+    },
+    {
+        title:"Decentralized Electricity Credit and Trading ",
+        description:"Peer-to-Peer Energy Exchange with Dynamic Pricing",
+        tech :"Django,MYSQL,React,Blockchain,Rest" ,
     }
 ]
 function Project(){

@@ -3,49 +3,30 @@ body{
   margin: 0;
   background :#f9f9f9;
   color: #333;
+  transition: background 0.3s ,color 0.3s ;
 }
 .dark{
   background-color: #121212;
   color: #e4e4e4;
 }
 
-.about {
-  padding: 4rem 2rem;
-  display: flex;
-  align-items: left;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.about .profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #333;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.dark .about .profile-image {
-  border-color: #e4e4e4;
-}
-
-.about .profile-image:hover {
-  transform: scale(1.05);
-}
-
+/* NAVBAR */
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #222;
-  color: white;
+  background:#ffffffcc;
+  color: #222;
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.3s,color 0.3s;
+}
+body.dark .navbar{
+  background: #1a1a1acc;
+  color: #e4e4e4;
 }
 .navbar ul{
   list-style: none;
@@ -54,21 +35,26 @@ body{
 }
 .navbar a{
   font-weight: 500;
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 .theme-btn{
   background: none;
   border: none;
-  color: rgb(250, 248, 250);
+  color: inherit;
   cursor: pointer;
+  font-size: 1.2rem;
 }
+
+/* HERO */
 .hero{
   text-align: center;
   padding: 5rem 1rem;
   background: linear-gradient(120deg,#4f46e5,#06b6d4);
+  transition: background 0.3s;
   color: white;
 }
+
 .hero span{
   color: #0cd16f;
 }
@@ -77,28 +63,53 @@ body{
   color: #333;
   padding: 0.8rem 1.6rem;
   border-radius: 25px;
-  text-decoration: none;
   display: inline-block;
   margin-top: 1.5rem;
+  text-decoration: none;
+  transition: background 0.3s,color 0.3s;
 }
-/* .about{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 2rem ;
-  background-color: #0cd16f;
+.hero .btn:hover{
+  background: #0cd16f;
+  color: white;
 }
-.about img{
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-} */
-.projects {
- 
+
+/* ABOUT */
+
+
+.about {
   padding: 4rem 2rem;
-  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: color 0.3s;
+}
+
+.about .profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3eaa81;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ,border-color 0.3s;
+}
+
+body.dark .about .profile-image {
+  border-color: #e4e4e4;
+  border: 4px solid #38bdf8;
+}
+
+.about .profile-image:hover {
+  transform: scale(1.05);
+}
+
+
+/* PROJECT */
+.projects {
+  padding: 4rem 2rem;
   text-align: left;
-  
 }
 .project-lists{
   display: grid;
@@ -106,42 +117,72 @@ body{
   gap: 1.5rem;
 }
 .project-card{
- 
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0 , 0  ,0, 0.1);
+  background: #fff;
+  transition: all 0.3s ease;
+  border-top: 4px solid #2563eb;
+
 }
+.project-card h3{
+    color: #1e3a8a;
+    font-size: 1.3rem;
+}
+.dark .project-card h3{
+    color: #60a5fa;
+}
+body.dark .project-card{ 
+  background: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+  border-top: 4px solid #38bdf8;
+}
+.project-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+/* {SKILLS} */
 .skills {
   padding: 20px;
-  margin-left: 20px;
   text-align: left;
-
 }
 .skill-grid{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 0;
 }
 .skill-card{
-  background: #ccd2e0;
+  background: white;
   border-radius: 12px;
   width: 100px;
-  transition: transform 0.3s;
+  transition:  all 0.3s ease,color 0.3s;
   text-align: center;
   padding: 15px;
-  color: #0c0c0c;
+  /* color: #0c0c0c; */
 
+}
+body.dark .skill-card{
+  background: #121212;
 }
 .skill-card:hover{
   transform: scale(1.05);
 }
+/* CONTACT */
 
 .contact{
   text-align: left;
   padding: 4rem 2rem;
+  border: 4px solid #1e3a8a;
+  border-radius: 50px;
+}
+body.dark .contact{
+  border: 4px solid #38bdf8;
+}
+.pe{
+  font-size: large;
 }
 .footer{
   background: #222;
@@ -151,19 +192,19 @@ body{
   font-size: 0.9rem;
 }
 @media(max-width:786px){
-  .navbar{
+  /* .navbar{
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
   .navbar ul{
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     margin-top: 0.5rem;
   }
   .navbar ul li{
     margin: 0.5rem 0;
-  }
+  } */
   .hero{
     padding: 5rem 1rem;
     font-size: 0.95rem;

@@ -4,7 +4,7 @@ function Contact(){
         <section id="contact" className="contact">
             <h2>Contact Me</h2>
             <p>Let's collobrate or discuss your project ideas!</p>
-            <p>
+            <p className="pe">
                 Email:<a href="mailto:maferozali7866@gmail.com">maferozali7866@gmail.com</a>
             </p>
             {/* <p>
