@@ -1,11 +1,13 @@
 import React from "react";
+import profileImg from '../assets/profile.jpg';
 
 function About(){
     return(
         <section id="about" className="about">
-            <img src="public\profile.jpg" alt="profile" />
+            <h2>About Me</h2>
+            <img src={profileImg} alt="My Profile" className="profile-image" />
             <div>
-                <h2>About Me</h2>
+                
                 <p>
                     I'm a passionate developer 
                     Interseted to creating user friendly web applications using
@@ -13,6 +15,7 @@ function About(){
 
                 </p>
             </div>
+      
         </section>
     );
 }

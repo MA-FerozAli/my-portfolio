@@ -7,6 +7,7 @@ import SKills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Project from './components/Projects';
+import Dashboard from './components/Dashboard';
 
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
   <Hero />
   <About />
   <Project />
+  <Dashboard/>
   <SKills />
   <Contact />
   <Footer />
