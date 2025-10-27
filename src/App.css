@@ -23,6 +23,7 @@ body{
   top: 0;
   z-index: 100;
   transition: background 0.3s,color 0.3s;
+  flex-wrap: wrap;
 }
 body.dark .navbar{
   background: #1a1a1acc;
@@ -32,6 +33,8 @@ body.dark .navbar{
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 .navbar a{
   font-weight: 500;
@@ -192,19 +195,28 @@ body.dark .contact{
   font-size: 0.9rem;
 }
 @media(max-width:786px){
-  /* .navbar{
+  .navbar{
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
   .navbar ul{
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    display: none;
     margin-top: 0.5rem;
+  }
+  .navbar ul.active{
+    display: flex;
   }
   .navbar ul li{
     margin: 0.5rem 0;
-  } */
+    width: 100%;
+  }
+  .theme-btn{
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
   .hero{
     padding: 5rem 1rem;
     font-size: 0.95rem;

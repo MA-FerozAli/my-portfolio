@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import {Link as LinkIcon}from 'lucide-react'
 const projectData =[
     {
         title:"Complaint Management",
@@ -18,6 +18,7 @@ function Project(){
         <section id="projects" className="projects">
             <h2>Projects</h2>
              <div className="project-list">
+                <button><LinkIcon size={20}/></button>
                  {projectData.map((proj,index)=>(
                     <div key={index}
                     className="project-card"> 
